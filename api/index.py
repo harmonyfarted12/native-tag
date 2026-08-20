@@ -14,7 +14,7 @@ class GameInfo:
         self.AppCreds:  str = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
         self.OculusAppId: str = "1358888013967187"
         self.EntitlementCheck: bool = False
-        self.MothershipJwtSecret: str = "asgrudgsduifgasiudgyiusdfgf8sdgtfd97gsd978sdgfgsdfuifgsiudfgiusdfgiusdgfiusgdiugsidgf"  # Set this to a long random secret string
+        self.MothershipJwtSecret: str = "nicduigsduifgasiudgyiusdfgf8sdgtfd97gsd978sdgfgsdfuifgsiudfgiusdfgiusdgfiusgdiugsidgf"  # Set this to a long random secret string
 
     def GetAuthHeaders(self) -> dict[str, str]:
         return {
@@ -672,21 +672,21 @@ def titledata():
             "Elder", "Honey", "Nurse", "Doctor", "Rebel", 
             "Shape", "Ally", "Driver", "Deputy"
         ],
-        "BundleBoardSign": "<color=#ff4141>discord.gg/VKFuNbHvtH</color>",
-        "BundleKioskButton": "<color=#ff4141>discord.gg/VKFuNbHvtH</color>",
-        "BundleKioskSign": "<color=#ff4141>discord.gg/VKFuNbHvtH/</color>",
-        "BundleLargeSign": "<color=#ff4141>discord.gg/VKFuNbHvtH</color>",
+        "BundleBoardSign": "<color=#ff4141>discord.gg/aeCsvpKGg</color>",
+        "BundleKioskButton": "<color=#ff4141>discord.gg/aeCsvpKGg</color>",
+        "BundleKioskSign": "<color=#ff4141>discord.gg/aeCsvpKGg/</color>",
+        "BundleLargeSign": "<color=#ff4141>discord.gg/aeCsvpKGg</color>",
         "EmptyFlashbackText": "FLOOR TWO NOW OPEN\n FOR BUSINESS\n\nSTILL SEARCHING FOR\nBOX LABELED 2021",
         "EnableCustomAuthentication": True,
         "GorillanalyticsChance": 4320,
         "LatestPrivacyPolicyVersion": "2024.09.20",
         "LatestTOSVersion": "2024.09.20",
-        "MOTD": "<color=orange>WELCOME TO BLAWG TAGZ</color>  <color=green>HAVE FUN!</color>  <color=red>CREDITS TO HARLUM BRAZI</color>  <color=red>GAME GOT SHUT DOWN ON APP LAB BUT WILL COME BACK ON MONDAY THE PROVET APP LAB IS OPEN SO GAME IS STILL ACTIVE!</color>  <color=yellow>IF YOU ENJOY THE GAME, PLEASE GIVE IT  (5 STARS)!</color> <color=yellow>https://discord.gg/aDhrFgNrxt</color>",
-        "SeasonalStoreBoardSign": "<color=#ff7241>FALL!</color>",
-        "TOS_2024.09.20": "discord.gg/VKFuNbHvtH",
+        "MOTD": "<color=white>WELCOME TO NATIVE TAG</color>  <color=red>HAVE FUN!</color>  <color=red>TALKING BEN MADE THIS GAME | QUEST IS THE OWNER AS WELL</color>  <color=white>TALKING HANK IS TUFF</color>  <color=yellow>IF YOU ENJOY THE GAME, PLEASE GIVE IT  (5 STARS)!</color> <color=yellow>discord.gg/aeCsvpKGg</color>",
+        "SeasonalStoreBoardSign": "<color=#ff7241>Halloween !</color>",
+        "TOS_2024.09.20": "discord.gg/aeCsvpKGg",
         "TOBAlreadyOwnCompTxt": "discord.gg/VKFuNbHvtH",
         "TOBAlreadyOwnPurchaseBundle": "BLABLABLA",
-        "TOBDefCompTxt": "discord.gg/VKFuNbHvtH",
+        "TOBDefCompTxt": "discord.gg/aeCsvpKGg",
         "TOBDefPurchaseBtnDefTxt": "BLABLABLA",
         "UseLegacyIAP": False
         
