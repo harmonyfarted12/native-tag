@@ -681,7 +681,7 @@ def titledata():
         "GorillanalyticsChance": 4320,
         "LatestPrivacyPolicyVersion": "2024.09.20",
         "LatestTOSVersion": "2024.09.20",
-        "MOTD": "<color=white>WELCOME TO NATIVE TAG</color>  <color=red>HAVE FUN!</color>  <color=red>TALKING BEN MADE THIS GAME | QUEST IS THE OWNER AS WELL</color>  <color=white>TALKING HANK IS TUFF</color>  <color=yellow>IF YOU ENJOY THE GAME, PLEASE GIVE IT  (5 STARS)!</color> <color=yellow>discord.gg/aeCsvpKGg</color>",
+        "MOTD": "<color=white>WELCOME TO NATIVE TAG</color>  <color=red>HAVE FUN!</color>  <color=red>RICK SANCHEZ MADE THIS GAME | QUEST IS THE OWNER AS WELL</color>  <color=white>MORTY SMITH IS TUFF</color>  <color=yellow>IF YOU ENJOY THE GAME, PLEASE GIVE IT  (5 STARS)!</color> <color=yellow>discord.gg/aeCsvpKGg</color>",
         "SeasonalStoreBoardSign": "<color=#ff7241>Halloween !</color>",
         "TOS_2024.09.20": "discord.gg/aeCsvpKGg",
         "TOBAlreadyOwnCompTxt": "discord.gg/VKFuNbHvtH",
