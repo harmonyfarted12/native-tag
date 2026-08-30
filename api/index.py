@@ -19,7 +19,7 @@ class GameInfo:
         self.TitleId:   str = "52CBD"
         self.SecretKey: str = "HM4GOGINZORY95ZJHQKABNRCFZHRTPCYK4R1SRJ8F885FEYHM7"
         self.AppCreds:  str = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
-        self.OculusAppId: str = "1358888013967187"
+        self.OculusAppId: str = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
         self.EntitlementCheck: bool = True
 
     def GetAuthHeaders(self) -> dict[str, str]:
