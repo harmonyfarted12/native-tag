@@ -13,7 +13,7 @@ class GameInfo:
         self.SecretKey: str = "HM4GOGINZORY95ZJHQKABNRCFZHRTPCYK4R1SRJ8F885FEYHM7"
         self.AppCreds:  str = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
         self.OculusAppId: str = "1358888013967187"
-        self.EntitlementCheck: bool = False
+        self.EntitlementCheck: bool = True
         self.MothershipJwtSecret: str = " uigsduifgasiudgyiusdfgf8sdgtfd97gsd978sdgfgsdfuifgsiudfgiusdfgiusdgfiusgdiugsidgf"  # Set this to a long random secret string
 
     def GetAuthHeaders(self) -> dict[str, str]:
