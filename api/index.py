@@ -1,6 +1,3 @@
-Flask==2.3.3
-requests==2.31.0  # PUT THIS IN REQUIREMENTS FOR THE BACKEND FOR DUMBO PPL WHO DONT KNOW
-
 import json
 import requests
 import random
