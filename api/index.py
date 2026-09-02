@@ -572,7 +572,7 @@ class GameInfo:
        self.AppCreds = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
        self.OculusAppId = "1358888013967187"
        self.EntitlementCheck = false
-       self.appidcheck = True
+       self.appidcheck = false
        self.MaxAllowedSpeed = 9
        self.MaxAllowedArmLength = 1.45
        self.SpeedViolationThreshold = 3
