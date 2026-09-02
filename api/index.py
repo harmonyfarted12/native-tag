@@ -47,7 +47,7 @@ ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
 # ---------- Meta Attestation Config ----------
 # Meta's attestation "package_id" == your Android manifest applicationId.
 # Verify with: aapt dump badging <apk> | grep package
-EXPECTED_PACKAGE_NAME = "com.talkingben.YALETAG"
+EXPECTED_PACKAGE_NAME = "com.talkingben.nativetag"
 EXPECTED_APK_SIGNATURE = "6F:7F:DE:85:24:FF:1F:1B:7D:6A:16:76:5F:67:26:7F:ED:50:C2:47:59:37:6F:C7:F1:50:EA:8F:0A:A4:67:2B:60"
 ATTEST_SECRET_KEY = "K9vX7mQ2Lp8Nz4Rc1Hd6Tf3Wy5Js0BgU"
 
