@@ -47,7 +47,7 @@ ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
 # ---------- Meta Attestation Config ----------
 # Meta's attestation "package_id" == your Android manifest applicationId.
 # Verify with: aapt dump badging <apk> | grep package
-EXPECTED_PACKAGE_NAME = "com.talkingben.nativetag"
+EXPECTED_PACKAGE_NAME = "com.talkingben.YALETAG"
 EXPECTED_APK_SIGNATURE = "6F:7F:DE:85:24:FF:1F:1B:7D:6A:16:76:5F:67:26:7F:ED:50:C2:47:59:37:6F:C7:F1:50:EA:8F:0A:A4:67:2B:60"
 ATTEST_SECRET_KEY = "K9vX7mQ2Lp8Nz4Rc1Hd6Tf3Wy5Js0BgU"
 
@@ -99,7 +99,7 @@ QUEST_DEVICE_ALLOWLIST = {"quest", "quest 2", "quest 3", "quest 3s", "quest pro"
 HEARTBEAT_AUTO_UNBLOCK_MIN_AGE = 0        # Changed from 60 to 0 - unblock on first valid beat
 UNBLOCKABLE_TYPES = {"HEARTBEAT_FAILED"}
 
-BLOCK_REASON = "AUTOMATED DETECTION: KAINEAC \u2014 CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/nativetag"
+BLOCK_REASON = "AUTOMATED DETECTION: KAINEAC \u2014 CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/YALETAG"
 
 # ---------- Rate Limiting ----------
 _rate_limit_store = defaultdict(lambda: {"count": 0, "reset_at": 0})
@@ -169,7 +169,7 @@ def _get_hb_col():
        return None
    try:
        _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
-       _hb_col = _mongo_client["NATIVETAG"]["heartbeats"]
+       _hb_col = _mongo_client["YALETAG"]["heartbeats"]
        try:
            _hb_col.create_index("expireAt", expireAfterSeconds=0)
            _hb_col.create_index("oculusId", unique=True)
@@ -186,7 +186,7 @@ def _get_blocked_col():
        return _blocked_col
    if _get_hb_col() is None:
        return None
-   _blocked_col = _mongo_client["NATIVETAG"]["blocked_players"]
+   _blocked_col = _mongo_client["YALETAG"]["blocked_players"]
    try:
        _blocked_col.create_index("expireAt", expireAfterSeconds=0)
        _blocked_col.create_index("playFabId", unique=True)
@@ -200,7 +200,7 @@ def _get_violation_col():
        return _violation_col
    if _get_hb_col() is None:
        return None
-   _violation_col = _mongo_client["NATIVETAG"]["violations"]
+   _violation_col = _mongo_client["YALETAG"]["violations"]
    try:
        _violation_col.create_index("playFabId", unique=True)
    except Exception as e:
@@ -373,7 +373,7 @@ def _get_attest_col():
        except Exception as e:
            print(f"[Mongo] attest init failed: {e}")
            return None
-   _attest_col = _mongo_client["NATIVETAG"]["attestations"]
+   _attest_col = _mongo_client["YALETAG"]["attestations"]
    try:
        _attest_col.create_index("expireAt", expireAfterSeconds=0)
        _attest_col.create_index("oculusId", unique=True)
@@ -440,7 +440,7 @@ def _get_sess_col():
        return _sess_col
    if _get_hb_col() is None:
        return None
-   _sess_col = _mongo_client["NATIVETAG"]["hb_sessions"]
+   _sess_col = _mongo_client["YALETAG"]["hb_sessions"]
    try:
        _sess_col.create_index("expireAt", expireAfterSeconds=0)
        _sess_col.create_index("oculusId", unique=True)
@@ -642,7 +642,7 @@ def _get_device_ban_col():
        except Exception as e:
            print(f"[Mongo] device_ban init failed: {e}")
            return None
-   _device_ban_col = _mongo_client["NATIVETAG"]["device_bans"]
+   _device_ban_col = _mongo_client["YALETAG"]["device_bans"]
    try:
        _device_ban_col.create_index("deviceId", unique=True)
        for doc in _device_ban_col.find():
@@ -739,7 +739,7 @@ def _get_nonce_col():
            _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
        except:
            return None
-   _attest_nonce_col = _mongo_client["NATIVETAG"]["attest_nonces"]
+   _attest_nonce_col = _mongo_client["YALETAG"]["attest_nonces"]
    try:
        _attest_nonce_col.create_index("expireAt", expireAfterSeconds=0)
        _attest_nonce_col.create_index("nonce", unique=True)
@@ -2778,7 +2778,7 @@ def photonauth():
                        }), 403
                    add_permanent_block(
                        UserId,
-                       "AUTOMATED DETECTION: XREAC - CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/nativetag",
+                       "AUTOMATED DETECTION: XREAC - CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/YALETAG",
                        "ATTESTATION_FAILED",
                        oculus_id=oculus_id
                    )
@@ -2787,7 +2787,7 @@ def photonauth():
                        {"name": "Oculus ID", "value": f"```{oculus_id}```", "inline": True},
                        {"name": "IP", "value": f"```{client_ip}```", "inline": True},
                        {"name": "Detail", "value": f"```Meta attestation failed: {att_reason}```", "inline": False},
-                       {"name": "Action", "value": "```Photon BLOCKED - Appeal at discord.gg/nativetag```", "inline": False}
+                       {"name": "Action", "value": "```Photon BLOCKED - Appeal at discord.gg/YALETAG```", "inline": False}
                    ], 0xFF6600)
                    active_sessions.pop(UserId, None)
                    _drop_session(oculus_id)
@@ -3563,7 +3563,7 @@ def _get_report_spam_col():
            _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
        except:
            return None
-   _report_spam_col = _mongo_client["NATIVETAG"]["report_spam"]
+   _report_spam_col = _mongo_client["YALETAG"]["report_spam"]
    try:
        _report_spam_col.create_index("reporterId", unique=True)
    except:
@@ -3615,7 +3615,7 @@ def report_spam_check():
            requests.post(
                url=f"https://{settings.TitleId}.playfabapi.com/Admin/BanUsers",
                json={"Bans": [{"PlayFabId": reporter_id, "DurationInHours": REPORT_SPAM_BAN_HOURS,
-                      "Reason": "SPAM REPORTING - IF THIS WAS A FALSE BAN, PLEASE APPEAL AT discord.gg/nativetag"}]},
+                      "Reason": "SPAM REPORTING - IF THIS WAS A FALSE BAN, PLEASE APPEAL AT discord.gg/YALETAG"}]},
                headers=settings.GetAuthHeaders(), timeout=8
            )
        except Exception as e:
