@@ -53,13 +53,13 @@ ATTEST_SECRET_KEY = "K9vX7mQ2Lp8Nz4Rc1Hd6Tf3Wy5Js0BgU"
 
 META_APP_ID = "1358888013967187"
 META_APP_SECRET = "0ec4b351f6d1d95f563f4e8bb76b9bd2"
-META_ATTEST_CREDS = f"OC|{META_APP_ID}|{META_APP_SECRET}"
+META_ATTEST_CREDS = f"OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
 
 ENFORCE_HEARTBEAT = True
 HEARTBEAT_GRACE_PERIOD = 60             # 3x the 30s interval: covers 2 missed beats + cold start
 HEARTBEAT_ALLOW_NEW_SESSIONS = True
 
-HB_ENFORCE_SIG = False
+HB_ENFORCE_SIG = True
 HB_MAX_SKEW = 45
 PHOTON_REQUIRE_BEAT = True
 PHOTON_AUTH_GRACE = 0
@@ -84,7 +84,7 @@ HB_NOT_READY_MAX = 5               # Increased from 3
 HB_NOT_READY_WINDOW = 15         # Increased from 30
 
 # ---------- HWID Configuration ----------
-ENFORCE_HWID = False
+ENFORCE_HWID = True
 HWID_FAILURE_LIMIT = 100
 GENERATE_PSEUDO_HWID = True
 
@@ -571,7 +571,7 @@ class GameInfo:
        self.SecretKey = "HM4GOGINZORY95ZJHQKABNRCFZHRTPCYK4R1SRJ8F885FEYHM7"
        self.AppCreds = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
        self.OculusAppId = "1358888013967187"
-       self.EntitlementCheck = False
+       self.EntitlementCheck = True
        self.appidcheck = True
        self.MaxAllowedSpeed = 9
        self.MaxAllowedArmLength = 1.45
