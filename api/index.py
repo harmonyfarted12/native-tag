@@ -99,7 +99,7 @@ QUEST_DEVICE_ALLOWLIST = {"quest", "quest 2", "quest 3", "quest 3s", "quest pro"
 HEARTBEAT_AUTO_UNBLOCK_MIN_AGE = 0        # Changed from 60 to 0 - unblock on first valid beat
 UNBLOCKABLE_TYPES = {"HEARTBEAT_FAILED"}
 
-BLOCK_REASON = "AUTOMATED DETECTION: KAINEAC \u2014 CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/bwZ3P84EFw"
+BLOCK_REASON = "AUTOMATED DETECTION: KAINEAC \u2014 CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/nativetag"
 
 # ---------- Rate Limiting ----------
 _rate_limit_store = defaultdict(lambda: {"count": 0, "reset_at": 0})
@@ -2778,7 +2778,7 @@ def photonauth():
                        }), 403
                    add_permanent_block(
                        UserId,
-                       "AUTOMATED DETECTION: XREAC - CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/bwZ3P84EFw",
+                       "AUTOMATED DETECTION: XREAC - CHEATING OR EXPLOITING\nIF THIS WAS A FALSE DETECTION, PLEASE MAKE AN APPEAL IN:\ndiscord.gg/nativetag",
                        "ATTESTATION_FAILED",
                        oculus_id=oculus_id
                    )
@@ -2787,7 +2787,7 @@ def photonauth():
                        {"name": "Oculus ID", "value": f"```{oculus_id}```", "inline": True},
                        {"name": "IP", "value": f"```{client_ip}```", "inline": True},
                        {"name": "Detail", "value": f"```Meta attestation failed: {att_reason}```", "inline": False},
-                       {"name": "Action", "value": "```Photon BLOCKED - Appeal at discord.gg/bwZ3P84EFw```", "inline": False}
+                       {"name": "Action", "value": "```Photon BLOCKED - Appeal at discord.gg/nativetag```", "inline": False}
                    ], 0xFF6600)
                    active_sessions.pop(UserId, None)
                    _drop_session(oculus_id)
@@ -2994,22 +2994,22 @@ def titledata():
               "Entries": ["HARMONY", "YUKI", "EITAM", ""]  
           }  
       ],  
-      "BundleBoardSign": "<color=#E04E9D>NATIVE </color><color=#FF6250>TAG</color>",  
-      "BundleKioskButton": "<color=#E04E9D>NATIVE </color><color=#FF6250>TAG</color>",  
-      "BundleKioskSign": "<color=#E04E9D>NATIVE </color><color=#FF6250>TAG</color>",  
-      "BundleLargeSign": "<color=#E04E9D>NATIVE </color><color=#FF6250>TAG</color>",  
+      "BundleBoardSign": "<color=#E04E9D>NATIVE</color><color=#FF6250>TAG</color>",  
+      "BundleKioskButton": "<color=#E04E9D>NATIVE</color><color=#FF6250>TAG</color>",  
+      "BundleKioskSign": "<color=#E04E9D>NATIVE</color><color=#FF6250>TAG</color>",  
+      "BundleLargeSign": "<color=#E04E9D>NATIVE</color><color=#FF6250>TAG</color>",  
       "EmptyFlashbackText": "FLOOR TWO NOW OPEN\n FOR BUSINESS\n\nSTILL SEARCHING FOR\nBOX LABELED 2021",  
       "EnableCustomAuthentication": True,  
       "GorillanalyticsChance": 4320,  
       "LatestPrivacyPolicyVersion": "2024.09.20",  
       "LatestTOSVersion": "2024.09.20",  
-      "MOTD": "<color=#00FFFF>N</color><color=#00F5FF>A</color><color=#00EBFF>T</color><color=#00E1FF>I</color><color=#00D7FF>V</color><color=#00CDFF>M</color><color=#00C3FF>E</color> <color=#00AFFF>T</color><color=#00A5FF>A</color> <color=#0090FF>G</color><color=#0086FF></color><color=#007CFF></color><color=#0072FF></color> <color=#0054FF></color><color=#004AFF></color><color=#0040FF></color>\n<color=#BE38F3></color><color=#C23AE9></color><color=#C63DE0>D</color><color=#C93FD6>A</color><color=#CD42CD>T</color><color=#D144C3>E</color> <color=#D949B0>:</color> <color=#E04E9D>F</color><color=#E45193>A</color><color=#E8538A>L</color><color=#EC5680>L</color> <color=#F05876>F</color><color=#F45B6D>L</color><color=#FB605A>A</color><color=#FF6250>S</color><color=#E45193>H</color><color=#E8538A>B</color><color=#EC5680>A</color><color=#F05876>C</color><color=#F45B6D>K</color> <color=#FB605A>2</color><color=#FF6250>0</color><color=#E45193>2</color><color=#E8538A>3</color>\n<color=#FFD700>F</color><color=#FFC800>O</color><color=#FFB900>U</color><color=#FFAA00>N</color><color=#FF9B00>D</color><color=#FF8C00>E</color><color=#FF7D00>R</color><color=#FF6E00>:</color> <color=#FF5F00>X</color><color=#FF5000>R</color><color=#FF4100>E</color>\n<color=#FFAB01>O</color><color=#FBA301>W</color><color=#F79C01>N</color><color=#F39401>E</color><color=#EF8C01>R</color><color=#EC8501>S</color> <color=#E47601>:</color> <color=#CC4800>L</color><color=#C84000>I</color><color=#C53900>L</color><color=#C13100>C</color><color=#BD2900>H</color><color=#B92200>U</color><color=#B51A00>P</color><color=#B11300>A</color><color=#AD0B00>,</color><color=#A90300>H</color><color=#A50000>A</color><color=#A10000>P</color><color=#9D0000>P</color><color=#990000>Y</color><color=#950000>,</color> <color=#8D0000>R</color><color=#890000>A</color><color=#850000>W</color>\n<color=#FF00FF>N</color><color=#F500F5>E</color><color=#EB00EB>W</color> <color=#D700D7>D</color><color=#CD00CD>I</color><color=#BF00BF>S</color><color=#B500B5>C</color><color=#AB00AB>O</color><color=#A100A1>R</color><color=#970097>D</color><color=#8D008D>:</color> <color=#7D007D>D</color><color=#730073>I</color><color=#690069>S</color><color=#5F005F>C</color><color=#550055>O</color><color=#4B004B>R</color><color=#410041>D</color><color=#370037>.</color><color=#2D002D>G</color><color=#230023>G</color><color=#190019>/</color><color=#0F000F>R</color><color=#050005>U</color><color=#000000>S</color><color=#0000F5>H</color><color=#0000EB>T</color><color=#0000E1>A</color><color=#0000D7>G</color>\n<color=#02FB00>R</color><color=#02F10A>U</color><color=#02E614>S</color><color=#02DC1D>H</color> <color=#02C731>#</color><color=#02BC3B>#</color><color=#01B244>#</color><color=#01A74E>#</color><color=#019D58>#</color> <color=#019262>I</color><color=#017E75>S</color> <color=#016989>N</color><color=#015E92>O</color><color=#01549C>T</color> <color=#0149A6>B</color><color=#013FB0>A</color><color=#0034B9>N</color><color=#002AC3>N</color><color=#001FCD>A</color><color=#0015D7>B</color><color=#000AE0>L</color><color=#0000EA>E</color><color=#0000EA>!</color>",
-      "SeasonalStoreBoardSign": "<color=purple>RATE THE GAME 5 STARS!</color>\n\n<color=aqua>YALE TAG",  
-      "TOS_2024.09.20": "YALE TAG",  
-      "TOBAlreadyOwnCompTxt": "YALE TAG",  
-      "TOBAlreadyOwnPurchaseBundle": "RETRO",  
-      "TOBDefCompTxt": "YALE TAG",  
-      "TOBDefPurchaseBtnDefTxt": "RETRO",  
+      "MOTD": "<color=#00FFFF>W</color><color=#00F5FF>E</color><color=#00EBFF>L</color><color=#00E1FF>C</color><color=#00D7FF>O</color><color=#00CDFF>M</color><color=#00C3FF>E</color> <color=#00AFFF>T</color><color=#00A5FF>O</color> <color=#0090FF>N</color><color=#0086FF>A</color><color=#007CFF>T</color><color=#0072FF>I</color><color=#0068FF>V</color><color=#005EFF>E</color> <color=#0054FF>T</color><color=#004AFF>A</color><color=#0040FF>G</color>\n<color=#BE38F3>U</color><color=#C23AE9>P</color><color=#C63DE0>D</color><color=#C93FD6>A</color><color=#CD42CD>T</color><color=#D144C3>E</color> <color=#D949B0>:</color> <color=#E04E9D>N</color><color=#E45193>O</color><color=#E8538A>W</color><color=#EC5680>R</color><color=#F05876>U</color><color=#F45B6D>Z</color> <color=#FB605A>2</color><color=#FF6250>0</color><color=#E45193>2</color><color=#E8538A>4</color>\n<color=#FFD700>F</color><color=#FFC800>O</color><color=#FFB900>U</color><color=#FFAA00>N</color><color=#FF9B00>D</color><color=#FF8C00>E</color><color=#FF7D00>R</color><color=#FF6E00>S</color> <color=#FF5F00>:</color> <color=#FF5000>Y</color><color=#FF4100>U</color><color=#FF3200>K</color><color=#FF2300>I</color> <color=#FF1400>A</color><color=#FF0500>N</color><color=#F50000>D</color> <color=#E50000>H</color><color=#D50000>A</color><color=#C50000>R</color><color=#B50000>M</color><color=#A50000>O</color><color=#950000>N</color><color=#850000>Y</color>\n<color=#FF00FF>D</color><color=#F500F5>I</color><color=#EB00EB>S</color><color=#E100E1>C</color><color=#D700D7>O</color><color=#CD00CD>R</color><color=#C300C3>D</color><color=#B900B9>.</color><color=#AF00AF>G</color><color=#A500A5>G</color><color=#9B009B>/</color><color=#910091>N</color><color=#870087>A</color><color=#7D007D>T</color><color=#730073>I</color><color=#690069>V</color><color=#5F005F>E</color><color=#550055>T</color><color=#4B004B>A</color><color=#410041>G</color>\n<color=#02FB00>G</color><color=#02F10A>O</color><color=#02E614>R</color><color=#02DC1D>I</color><color=#02D126>L</color><color=#02C731>L</color><color=#02BC3B>A</color><color=#02B244>#</color><color=#01A74E>#</color><color=#019D58>#</color><color=#019262>#</color> <color=#017E75>I</color><color=#016989>S</color> <color=#015E92>N</color><color=#01549C>O</color><color=#0149A6>T</color> <color=#013FB0>B</color><color=#0034B9>A</color><color=#002AC3>N</color><color=#001FCD>N</color><color=#0015D7>A</color><color=#000AE0>B</color><color=#0000EA>L</color><color=#0000EA>E</color>"
+      "SeasonalStoreBoardSign": "<color=purple>RATE THE GAME 5 STARS!</color>\n\n<color=aqua>NATIVE TAG",  
+      "TOS_2024.09.20": "NATIVE TAG",  
+      "TOBAlreadyOwnCompTxt": "NATIVE TAG",  
+      "TOBAlreadyOwnPurchaseBundle": "NATIVE TAG",  
+      "TOBDefCompTxt": "NATIVE TAG",  
+      "TOBDefPurchaseBtnDefTxt": "NATIVE TAG",  
       "UseLegacyIAP": False  
   }  
   return jsonify(response_data)
@@ -3617,7 +3617,7 @@ def report_spam_check():
            requests.post(
                url=f"https://{settings.TitleId}.playfabapi.com/Admin/BanUsers",
                json={"Bans": [{"PlayFabId": reporter_id, "DurationInHours": REPORT_SPAM_BAN_HOURS,
-                      "Reason": "SPAM REPORTING - IF THIS WAS A FALSE BAN, PLEASE APPEAL AT discord.gg/bwZ3P84EFw"}]},
+                      "Reason": "SPAM REPORTING - IF THIS WAS A FALSE BAN, PLEASE APPEAL AT discord.gg/nativetag"}]},
                headers=settings.GetAuthHeaders(), timeout=8
            )
        except Exception as e:
