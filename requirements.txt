@@ -1,4 +1,5 @@
-Flask
 requests
-jsonify
-Response
+Flask
+PyJWT
+pymongo
+python-dotenv
