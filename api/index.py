@@ -567,7 +567,7 @@ class GameInfo:
        self.TitleId = "52CBD"
        self.PhotonRealtimeAppId = "c9d99077-f8e2-48fa-84aa-c359605cfff6"
        self.PhotonVoiceAppId = "de8aa4c5-115b-4cbe-bb36-d2fc64385fae"
-       self.EnforceConfigMatch = False
+       self.EnforceConfigMatch = True
        self.SecretKey = "HM4GOGINZORY95ZJHQKABNRCFZHRTPCYK4R1SRJ8F885FEYHM7"
        self.AppCreds = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
        self.OculusAppId = "1358888013967187"
