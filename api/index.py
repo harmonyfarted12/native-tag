@@ -564,13 +564,13 @@ def try_consume_grace(oculus_id):
 # ---------- GameInfo ----------
 class GameInfo:
    def __init__(self):
-       self.TitleId = "9EC56"
-       self.PhotonRealtimeAppId = "4dbf46a1-b8e4-4121-8e83-d278f1bb403a"
-       self.PhotonVoiceAppId = "5450d102-9a1b-4185-a9f8-83d1d3193ffe"
+       self.TitleId = "52CBD"
+       self.PhotonRealtimeAppId = "c9d99077-f8e2-48fa-84aa-c359605cfff6"
+       self.PhotonVoiceAppId = "de8aa4c5-115b-4cbe-bb36-d2fc64385fae"
        self.EnforceConfigMatch = False
-       self.SecretKey = "GFGH5WAR987WSHJXIBZHFF7QQ3KP5W1NZ17IMB646FPTEHE5ZX"
-       self.AppCreds = "OC|1218829407983954|847988422453e78b2f422706e1981fb2"
-       self.OculusAppId = "1218829407983954"
+       self.SecretKey = "HM4GOGINZORY95ZJHQKABNRCFZHRTPCYK4R1SRJ8F885FEYHM7"
+       self.AppCreds = "OC|1358888013967187|0ec4b351f6d1d95f563f4e8bb76b9bd2"
+       self.OculusAppId = "1358888013967187"
        self.EntitlementCheck = True
        self.appidcheck = True
        self.MaxAllowedSpeed = 9
