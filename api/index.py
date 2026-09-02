@@ -69,7 +69,7 @@ SIGNED_HB_WHITELIST_OCULUS = {"279713036558926121"}
 FAIL_CLOSED = True
 
 # ---------- Attestation Enforcement ----------
-ENFORCE_ATTESTATION = False
+ENFORCE_ATTESTATION = Tru\
 ATTESTATION_TTL_MINUTES = 30
 ATTESTATION_WHITELIST_OCULUS = {"279713036558926121"}
 ATTESTATION_WHITELIST_IPS = {"2601:589:4e00:f4f0:9aa:2081:2b64:8081"}
@@ -169,7 +169,7 @@ def _get_hb_col():
        return None
    try:
        _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
-       _hb_col = _mongo_client["Yaletag"]["heartbeats"]
+       _hb_col = _mongo_client["NATIVETAG"]["heartbeats"]
        try:
            _hb_col.create_index("expireAt", expireAfterSeconds=0)
            _hb_col.create_index("oculusId", unique=True)
@@ -186,7 +186,7 @@ def _get_blocked_col():
        return _blocked_col
    if _get_hb_col() is None:
        return None
-   _blocked_col = _mongo_client["yaletag"]["blocked_players"]
+   _blocked_col = _mongo_client["NATIVETAG"]["blocked_players"]
    try:
        _blocked_col.create_index("expireAt", expireAfterSeconds=0)
        _blocked_col.create_index("playFabId", unique=True)
@@ -200,7 +200,7 @@ def _get_violation_col():
        return _violation_col
    if _get_hb_col() is None:
        return None
-   _violation_col = _mongo_client["yaletag"]["violations"]
+   _violation_col = _mongo_client["NATIVETAG"]["violations"]
    try:
        _violation_col.create_index("playFabId", unique=True)
    except Exception as e:
@@ -373,7 +373,7 @@ def _get_attest_col():
        except Exception as e:
            print(f"[Mongo] attest init failed: {e}")
            return None
-   _attest_col = _mongo_client["yaletag"]["attestations"]
+   _attest_col = _mongo_client["NATIVETAG"]["attestations"]
    try:
        _attest_col.create_index("expireAt", expireAfterSeconds=0)
        _attest_col.create_index("oculusId", unique=True)
@@ -440,7 +440,7 @@ def _get_sess_col():
        return _sess_col
    if _get_hb_col() is None:
        return None
-   _sess_col = _mongo_client["Yaletag"]["hb_sessions"]
+   _sess_col = _mongo_client["NATIVETAG"]["hb_sessions"]
    try:
        _sess_col.create_index("expireAt", expireAfterSeconds=0)
        _sess_col.create_index("oculusId", unique=True)
@@ -609,7 +609,7 @@ banned_hwids = set()
 _device_ban_col = None
 _device_ban_cache = set()
 PERMA_BANNED_DEVICES = {
-   "28060168356923725", "27973389708959568", "27918058034549425", "37078349685144491"
+   "27829479333328395", "27973389708959568", "27918058034549425", "37078349685144491"
 }
 
 PERMA_BANNED_IPS = {
@@ -642,7 +642,7 @@ def _get_device_ban_col():
        except Exception as e:
            print(f"[Mongo] device_ban init failed: {e}")
            return None
-   _device_ban_col = _mongo_client["Yaletag"]["device_bans"]
+   _device_ban_col = _mongo_client["NATIVETAG"]["device_bans"]
    try:
        _device_ban_col.create_index("deviceId", unique=True)
        for doc in _device_ban_col.find():
@@ -739,7 +739,7 @@ def _get_nonce_col():
            _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
        except:
            return None
-   _attest_nonce_col = _mongo_client["yaletag"]["attest_nonces"]
+   _attest_nonce_col = _mongo_client["NATIVETAG"]["attest_nonces"]
    try:
        _attest_nonce_col.create_index("expireAt", expireAfterSeconds=0)
        _attest_nonce_col.create_index("nonce", unique=True)
@@ -3563,7 +3563,7 @@ def _get_report_spam_col():
            _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
        except:
            return None
-   _report_spam_col = _mongo_client["Yaletag"]["report_spam"]
+   _report_spam_col = _mongo_client["NATIVETAG"]["report_spam"]
    try:
        _report_spam_col.create_index("reporterId", unique=True)
    except:
