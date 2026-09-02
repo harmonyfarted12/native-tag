@@ -1,12 +1,4 @@
 Flask==3.0.3
 requests
 jsonpppppppp
-random
-hashlib
-hmac
-time
-threading
 jwt
-os
-base64
-secrets
