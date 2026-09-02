@@ -39,8 +39,8 @@ load_dotenv()
 
 # ---------- Hardcoded secrets ----------
 WEBHOOK_URL = "https://discord.com/api/webhooks/1544737644020236360/0hD-YmpRnp8sKqxSqpqCjIxRCA0QYSSWaWSdAe2k3Ya2iWfaXIpboD2d_sdWhHeCZAyl"
-ALERT_WEBHOOK_URL = "https://discord.com/api/webhooks/1544737644020236360/0hD-YmpRnp8sKqxSqpqCjIxRCA0QYSSWaWSdAe2k3Ya2iWfaXIpboD2d_sdWhHeCZAyl"
-REPORT_WEBHOOK_URL = "https://discord.com/api/webhooks/1544737644020236360/0hD-YmpRnp8sKqxSqpqCjIxRCA0QYSSWaWSdAe2k3Ya2iWfaXIpboD2d_sdWhHeCZAyl"
+ALERT_WEBHOOK_URL = "https://discord.com/api/webhooks/1544767175162728511/PyZ4ONtaCWDinwdKu2GxOwPefs6SV5NKY2xC95hH7ESgDSm2V0xJaz3fs1E8lH8alBBS"
+REPORT_WEBHOOK_URL = "https://discord.com/api/webhooks/1544767392435937290/FhNSWR8VzSLr7D9n9yBSofr-xlKKeO7ErwJ3tFmpjWezLFAvwau69n4NotcK_jQ0vEuD"
 
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
 
