@@ -3,7 +3,7 @@ import requests
 import random
 import hashlib
 import hmac
-import timeF
+import time
 import threading
 import jwt
 import os
